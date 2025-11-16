@@ -152,7 +152,7 @@ if filtered.empty:
 else:
     total_faltante = float(np.nansum(filtered["DIF"]))
     valorizado_entrante = float(np.nansum(filtered["PRESUPUESTO"]))
-    valorizado_restante = float(np.nansum(np.maximum(filtered["MONTO REAL"], 0)))
+    valorizado_restante = float(np.nansum(np.maximum(filtered["MONTO_REAL"], 0)))
 
     c1, c2, c3 = st.columns(3)
     c1.metric("TOTAL FALTANTE", f"{total_faltante:,.2f}")
