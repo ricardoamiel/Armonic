@@ -151,8 +151,8 @@ if filtered.empty:
     st.warning("No hay insumos seleccionados (INCLUIR) para el cálculo del presupuesto.")
 else:
     total_faltante = float(np.nansum(filtered["DIF"]))
-    valorizado_entrante = float(np.nansum(filtered["MONTO_REAL"]))
-    valorizado_restante = float(np.nansum(np.maximum(filtered["PRESUPUESTO"], 0)))
+    valorizado_entrante = float(np.nansum(filtered["PRESUPUESTO"]))
+    valorizado_restante = float(np.nansum(np.maximum(filtered["MONTO REAL"], 0)))
 
     c1, c2, c3 = st.columns(3)
     c1.metric("TOTAL FALTANTE", f"{total_faltante:,.2f}")
