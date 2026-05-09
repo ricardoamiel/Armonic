@@ -1,2 +1,6 @@
 .env
 .streamlit
+
+*.csv
+*.json
+*.parquet
